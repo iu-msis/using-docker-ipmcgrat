@@ -18,9 +18,7 @@ table {
   width: 100%
 }
 
-//*
-https://github.com/tristen/tablesort/blob/gh-pages/tablesort.css
-*//
+/* table sort css from same site */
 th[role=columnheader]:not(.no-sort) {
 	cursor: pointer;
 }
