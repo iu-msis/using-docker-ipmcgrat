@@ -27,7 +27,7 @@
     </nav>
   </div>
 
-  <table class="table">
+  <table class="table" id="bookstable">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -108,5 +108,9 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
+<script src="js/tablesort.min.js"></script>
+<script>
+  new Tablesort(document.getElementById('bookstable'));
+</script>
 </body>
 </html>
