@@ -27,7 +27,7 @@
     </nav>
   </div>
 
-  <table class="table">
+  <table id="bookstable" class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -47,7 +47,7 @@
         <td type:"date">1960</td>
         <td type:"string">J. B. Lippincott & Co.</td>
         <td type="integer">281</td>
-        <td type="currency">$7.19</td>
+        <td type="currency">7.19</td>
       </tr>
       <tr>
         <th scope="row">2</th>
@@ -56,7 +56,7 @@
         <td type:"date">1925</td>
         <td type:"string">Charles Scribner's Sons</td>
         <td type="integer">218</td>
-        <td type="currency">$18.29</td>
+        <td type="currency">18.29</td>
       </tr>
       <tr>
         <th scope="row">3</th>
@@ -65,7 +65,7 @@
         <td type:"date">1958</td>
         <td type:"string">William Heinemann Ltd.</td>
         <td type="integer">224</td>
-        <td type="currency">$6.69</td>
+        <td type="currency">6.69</td>
       </tr>
       <tr>
         <th scope="row">4</th>
@@ -74,7 +74,7 @@
         <td type:"date">1851</td>
         <td type:"string">Harper & Brothers</td>
         <td type="integer">585</td>
-        <td type="currency">$12.11</td>
+        <td type="currency">12.11</td>
       </tr>
     </tbody>
   </table>
@@ -108,5 +108,10 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
+<script src="js/tablesort.min.js"></script>
+<!-- table sort plug in from http://tristen.ca/tablesort/demo/ -->
+<script>
+  new Tablesort(document.getElementById('bookstable'));
+</script>
 </body>
 </html>
