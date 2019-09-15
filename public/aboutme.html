@@ -19,25 +19,35 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="index.html">Home<span class="sr-only"></span></a>
+          <a class="nav-item nav-link active" href="index.html">Home</a>
           <a class="nav-item nav-link" href="aboutme.html">About Me</a>
           <a class="nav-item nav-link" href="books.html">Books</a>
         </div>
       </div>
     </nav>
   </div>
-<div class=HomePage>
-  <h1><center><strong><u>Timmothy Gardner</u></strong></h1></center>
-</div>
+<div class=HomePage id="randomuserinfo">
+  <a v-bind:href="person.picture.large">
+    <img alt="My Face" class="img-thumbnail" v-bind:src="person.picture.medium"></a>
+      <div class="container">
+        <div class="row">
+          <div id="randomuserinfo">
+            <div class="patientWaiting patient">
+              <center><span class="patientName">Name: {{ person.name.first }} {{ person.name.last }}</span><br></center>
+              <span class="patientName">Country: {{ person.nat }}</span><br>
+              <span class="patientName">DOB: {{ person.dob.date }}</span><br>
+              <span class="patientName">Age: {{ person.dob.age }}</span><br>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<center><a href="tim.jpg"><img src="tim.jpg" alt="My Face" class="img-thumbnail"></center></a>
-
-<h3><center>Country: USA</center></h3>
-<h3><center>DOB: 5/4/1979</center></h3>
-<h3><center>Age: 40</center></h3>
-<h3><center>Email: <a href="mailto:timmothy.gardner75@example.com">Timmothy Gardner</center></h3>
+      <a v-bind:href="'mailto:'+person.email" target="_blank" rel="noopener noreferrer">Email: {{person.email}} </a>
+    </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/randominfo.js"></script>
 
 </body>
 </html>
