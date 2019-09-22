@@ -82,3 +82,7 @@ th[role=columnheader]:not(.no-sort):hover:after {
 .patientName {
   text-transform: capitalize;
 }
+
+.container {
+  text-align: center;
+}

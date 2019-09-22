@@ -31,28 +31,27 @@
 <div id="randomuserinfo">
   <form @submit.prevent='fetchPatients()'>
 
-<div class=HomePage id="randomuserinfo">
+<div class="container" id="randomuserinfo">
   <a v-bind:href="person.picture.large">
     <img alt="My Face" class="img-thumbnail" v-bind:src="person.picture.medium"></a>
-      <div class="container">
-        <div class="row">
+
           <div id="randomuserinfo">
             <div class="patientWaiting patient">
-              <center><span class="patientName">Name: {{ person.name.first }} {{ person.name.last }}</span><br></center>
+              <span class="patientName">Name: {{ person.name.first }} {{ person.name.last }}</span><br>
               <span class="patientName">Country: {{ person.nat }}</span><br>
               <span class="patientName">DOB: {{ person.dob.date }}</span><br>
               <span class="patientName">Age: {{ person.dob.age }}</span><br>
             </div>
           </div>
-        </div>
-      </div>
 
-      <a v-bind:href="'mailto:'+person.email" target="_blank" rel="noopener noreferrer">Email: {{person.email}} </a>
-    </div>
+
+      <a v-bind:href="'mailto:'+person.email" target="_blank" rel="noopener noreferrer">Email: {{person.email}} </a><br>
 
     <button type="submit" class="btn btn-primary">Get New User</button>
+    </div>
   </form>
 </div>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
