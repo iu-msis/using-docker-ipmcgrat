@@ -26,6 +26,11 @@
       </div>
     </nav>
   </div>
+
+
+<div id="randomuserinfo">
+  <form @submit.prevent='fetchPatients()'>
+
 <div class=HomePage id="randomuserinfo">
   <a v-bind:href="person.picture.large">
     <img alt="My Face" class="img-thumbnail" v-bind:src="person.picture.medium"></a>
@@ -44,6 +49,10 @@
 
       <a v-bind:href="'mailto:'+person.email" target="_blank" rel="noopener noreferrer">Email: {{person.email}} </a>
     </div>
+
+    <button type="submit" class="btn btn-primary">Get New User</button>
+  </form>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
